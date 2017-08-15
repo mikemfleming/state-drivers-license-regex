@@ -1,15 +1,31 @@
 module.exports = {
   AL: {
-    regex: /^[0-9]{1,7}$/,
-    description: `7 Numeric Characters Only`,
+    test: [
+      {
+        regex: /^\d{7}$/,
+        description: `7 Numeric Characters`,
+      }
+    ],
   },
   AK: {
-    regex: /^[0-9]{1,7}$/,
+    regex: /^\d{7}$/,
     description: `7 Numeric Characters Only`,
   },
   AZ: {
-    regex: /(^[A-Z]{1}[0-9]{1,8}$)|(^[A-Z]{2}[0-9]{2,5}$)|(^[0-9]{9}$)/,
-    description: `Description for AZ`,
+    test: [
+      {
+        regex: /(^[A-Z]{1}[0-9]{1,8}$)/,
+        description: `1 letter followed by 1-8 numbers`,
+      },
+      {
+        regex: /(^[A-Z]{2}[0-9]{2,5}$)/,
+        description: `2 letters followed by 2-5 numbers`,
+      },
+      {
+        regex: /(^[0-9]{9}$)/,
+        description: `9 numbers`,
+      },
+    ]
   },
   AR: {
     regex: /^[0-9]{4,9}$/,
@@ -28,7 +44,7 @@ module.exports = {
     description: `CT`,
   },
   DE: {
-    regex: /^[0-9]{1,7}$/,
+    regex: /^\d{7}$/,
     description: `DE`,
   },
   DC: {
@@ -108,7 +124,7 @@ module.exports = {
     description: `MT`,
   },
   NE: {
-    regex: /^[0-9]{1,7}$/,
+    regex: /^\d{7}$/,
     description: `NE`,
   },
   NV: {

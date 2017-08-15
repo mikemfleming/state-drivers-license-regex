@@ -9,12 +9,21 @@ if (!dl) return console.log(`Invalid License Number`);
 const usdl = require(`./regex`);
 
 // APP LOGIC
-const status = usdl[state].regex.test(dl);
-const payload = status ? `License Number is Valid` : `Invalid Format: ${state} requires ${usdl[state].description}`;
+function validateDriversLicense(state, dl) {
+  const failedTests = usdl[state].test.filter(format => !format.regex.test(dl));
+  if (failedTests.length) {
+    const whyItFailed = failedTests.map(reason => reason.description).join(' OR ');
+    return {
+      status: 0,
+      message: `Required: ${whyItFailed}`,
+    };
+  }
+  return {
+    status: 1,
+    message: `License is Valid`,
+  }
+}
 
-const output = {
-  status,
-  payload,
-};
+const output = validateDriversLicense(state, dl);
 
-console.log(output);
+console.log(output)
