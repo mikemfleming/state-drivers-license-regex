@@ -112,7 +112,7 @@ module.exports = {
     // },
     {
       regex: /^[H]{1}[0-9]{8}$/,
-      description: `'H' followed by 8 numbers`
+      description: `H followed by 8 numbers`
     },
     {
       regex: /^[0-9]{9}$/,
@@ -170,7 +170,7 @@ module.exports = {
     // },
     {
       regex: /^[K]{1}[0-9]{8}$/,
-      description: `'K' followed by 8 numbers`,
+      description: `K followed by 8 numbers`,
     },
     {
       regex: /^[0-9]{9}$/,
@@ -304,7 +304,7 @@ module.exports = {
     // },
     {
       regex: /^[ABCEGHV]{1}[0-9]{3,8}$/,
-      description: `A,B,C,E,G,H or V followed by 3-8 numbers`,
+      description: `A, B, C, E, G, H or V followed by 3-8 numbers`,
     },
   ],
   NV: [
@@ -452,7 +452,7 @@ module.exports = {
     // },
     {
       regex: /^[V]{1}[0-9]{6}$/,
-      description: `'V' followed by 6 numbers`,
+      description: `V followed by 6 numbers`,
     },
   ],
   SC: [
@@ -492,7 +492,7 @@ module.exports = {
     // },
     {
       regex: /^[01234]{1}[0-9]{7}$/,
-      description: `0,1,2,3 or 4 followed by 7 numbers`,
+      description: `0, 1, 2, 3 or 4 followed by 7 numbers`,
     },
   ],
   UT: [
@@ -508,7 +508,7 @@ module.exports = {
     },
     {
       regex: /^[0-9]{7}[A]$/,
-      description: `7 numbers followed by 'A'`,
+      description: `7 numbers followed by A`,
     },
   ],
   VA: [
@@ -528,7 +528,7 @@ module.exports = {
   WA: [
     {
       regex: /^(?=.{12}$)[A-Z]{1,7}[A-Z0-9\\*]{4,11}$/,
-      description: `1-7 letters followed by any combination of letters, numbers, or '*' for a total of 12 characters`,
+      description: `1-7 letters followed by any combination of letters, numbers, or * for a total of 12 characters`,
     }
   ],
   WV: [
