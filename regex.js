@@ -1,8 +1,16 @@
+//////////////////
+// Commented out lines denote non ISO compliant formats
+////////////////
+
 module.exports = {
   AL: [
+    // {
+    //   regex: /^[0-9]{1,7}$/,
+    //   description: `1-7 numbers`,
+    // },
     {
-      regex: /^[0-9]{1,7}$/,
-      description: `1-7 numbers`,
+      regex: /^[0-9]{7}$/,
+      description: `7 numbers`,
     },
   ],
   AK: [
@@ -12,13 +20,21 @@ module.exports = {
     },
   ],
   AZ: [
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{1,8}$/,
+    //   description: `1 letter followed by 1-8 numbers`,
+    // },
     {
-      regex: /^[A-Z]{1}[0-9]{1,8}$/,
-      description: `1 letter followed by 1-8 numbers`,
+      regex: /^[A-Z]{1}[0-9]{8}$/,
+      description: `1 letter followed by 8 numbers`,
     },
+    // {
+    //   regex: /^[A-Z]{2}[0-9]{2,5}$/,
+    //   description: `2 letters followed by 2-5 numbers`,
+    // },
     {
-      regex: /^[A-Z]{2}[0-9]{2,5}$/,
-      description: `2 letters followed by 2-5 numbers`,
+      regex: /^[A-Z]{2}[0-9]{3,6}$/,
+      description: `2 letters followed by 3-6 numbers`,
     },
     {
       regex: /^[0-9]{9}$/,
@@ -26,9 +42,13 @@ module.exports = {
     },
   ],
   AR: [
+    // {
+    //   regex: /^[0-9]{4,9}$/,
+    //   description: `4-9 numbers`,
+    // },
     {
-      regex: /^[0-9]{4,9}$/,
-      description: `4-9 numbers`,
+      regex: /^[0-9]{9}$/,
+      description: `9 numbers`,
     },
   ],
   CA: [
@@ -42,14 +62,14 @@ module.exports = {
       regex: /^[0-9]{9}$/,
       description: `9 numbers`,
     },
-    {
-      regex: /^[A-Z]{1}[0-9]{3,6}$/,
-      description: `1 letter followed by 3-6 numbers`,
-    },
-    {
-      regex: /^[A-Z]{2}[0-9]{2,5}$/,
-      description: `2 letters followed by 2-5 numbers`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{3,6}$/,
+    //   description: `1 letter followed by 3-6 numbers`,
+    // },
+    // {
+    //   regex: /^[A-Z]{2}[0-9]{2,5}$/,
+    //   description: `2 letters followed by 2-5 numbers`,
+    // },
   ],
   CT: [
     {
@@ -86,9 +106,13 @@ module.exports = {
     },
   ],
   HI: [
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{8}$/,
+    //   description: `1 letter followed by 8 numbers`
+    // },
     {
-      regex: /^[A-Z]{1}[0-9]{8}$/,
-      description: `1 letter followed by 8 numbers`
+      regex: /^[H]{1}[0-9]{8}$/,
+      description: `'H' followed by 8 numbers`
     },
     {
       regex: /^[0-9]{9}$/,
@@ -106,16 +130,20 @@ module.exports = {
     },
   ],
   IL: [
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{11,12}$/,
+    //   description: `1 letter followed by 11-12 numbers`,
+    // }
     {
-      regex: /^[A-Z]{1}[0-9]{11,12}$/,
-      description: `1 letter followed by 11-12 numbers`,
+      regex: /^[A-Z]{1}[0-9]{11}$/,
+      description: `1 letter followed by 11 numbers`,
     }
   ],
   IN: [
-    {
-      regex: /^[A-Z]{1}[0-9]{9}$/,
-      description: `1 letter followed by 9 numbers`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{9}$/,
+    //   description: `1 letter followed by 9 numbers`,
+    // },
     {
       regex: /^[0-9]{9,10}$/,
       description: `9-10 numbers`,
@@ -132,10 +160,28 @@ module.exports = {
     },
   ],
   KS: [
+    // {
+    //   regex: /^([A-Z]{1}[0-9]{1}){2}[A-Z]{1}$/,
+    //   description: `1 letter then 1 number then 1 letter then 1 number then 1 letter`,
+    // },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{8}$/,
+    //   description: `1 letter followed by 8 numbers`,
+    // },
     {
-      regex: /^([A-Z]{1}[0-9]{1}){2}[A-Z]{1}$/,
-      description: `1 letter then 1 number then 1 letter then 1 number then 1 letter`,
+      regex: /^[K]{1}[0-9]{8}$/,
+      description: `'K' followed by 8 numbers`,
     },
+    {
+      regex: /^[0-9]{9}$/,
+      description: `9 numbers`,
+    },
+  ],
+  KY: [
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{8,9}$/,
+    //   description: `1 letter followed by 8-9 numbers`,
+    // },
     {
       regex: /^[A-Z]{1}[0-9]{8}$/,
       description: `1 letter followed by 8 numbers`,
@@ -145,20 +191,10 @@ module.exports = {
       description: `9 numbers`,
     },
   ],
-  KY: [
-    {
-      regex: /^[A-Z]{1}[0-9]{8,9}$/,
-      description: `1 letter followed by 8-9 numbers`,
-    },
-    {
-      regex: /^[0-9]{9}$/,
-      description: `9 numbers`,
-    },
-  ],
   LA: [
     {
-      regex: /^[0-9]{1,9}$/,
-      description: `1-9 numbers`
+      regex: /^[0-9]{9}$/,
+      description: `9 numbers`
     },
   ],
   ME: [
@@ -166,14 +202,18 @@ module.exports = {
       regex: /^[0-9]{7}$/,
       description: `7 numbers`,
     },
+    // {
+    //   regex: /^[0-9]{7}[A-Z]{1}$/,
+    //   description: `7 numbers followed by 1 letter`,
+    // },
     {
-      regex: /^[0-9]{7}[A-Z]{1}$/,
-      description: `7 numbers followed by 1 letter`,
+      regex: /^[0-9]{7}[X]{1}$/,
+      description: `7 numbers followed by 'X'`,
     },
-    {
-      regex: /^[0-9]{8}$/,
-      description: `8 numbers`,
-    },
+    // {
+    //   regex: /^[0-9]{8}$/,
+    //   description: `8 numbers`,
+    // },
   ],
   MD: [
     {
@@ -192,10 +232,10 @@ module.exports = {
     },
   ],
   MI: [
-    {
-      regex: /^[A-Z]{1}[0-9]{10}$/,
-      description: `1 letter followed by 10 numbers`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{10}$/,
+    //   description: `1 letter followed by 10 numbers`,
+    // },
     {
       regex: /^[A-Z]{1}[0-9]{12}$/,
       description: `1 letter followed by 12 numbers`,
@@ -218,28 +258,28 @@ module.exports = {
       regex: /^[A-Z]{1}[0-9]{5,9}$/,
       description: `1 letter followed by 5-9 numbers`,
     },
-    {
-      regex: /^[A-Z]{1}[0-9]{6}[R]{1}$/,
-      description: `1 letter followed by 6 numbers followed by 'R'`,
-    },
-    {
-      regex: /^[0-9]{8}[A-Z]{2}$/,
-      description: `8 numbers followed by 2 letters`,
-    },
-    {
-      regex: /^[0-9]{9}[A-Z]{1}$/,
-      description: `9 numbers followed by 1 letter`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{6}[R]{1}$/,
+    //   description: `1 letter followed by 6 numbers followed by 'R'`,
+    // },
+    // {
+    //   regex: /^[0-9]{8}[A-Z]{2}$/,
+    //   description: `8 numbers followed by 2 letters`,
+    // },
+    // {
+    //   regex: /^[0-9]{9}[A-Z]{1}$/,
+    //   description: `9 numbers followed by 1 letter`,
+    // },
     {
       regex: /^[0-9]{9}$/,
       description: `9 numbers`,
     },
   ],
   MT: [
-    {
-      regex: /^[A-Z]{1}[0-9]{8}$/,
-      description: `1 letter followed by 8 numbers`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{8}$/,
+    //   description: `1 letter followed by 8 numbers`,
+    // },
     {
       regex: /^[0-9]{13}$/,
       description: `13 numbers`,
@@ -249,29 +289,41 @@ module.exports = {
       description: `9 numbers`,
     },
     {
-      regex: /^[0-9]{14}$/,
-      description: `14 numbers`,
+      regex: /^[A-Z]{1}[0-9]{1}[A-Z0-9]{1}[0-9]{2}[A-Z]{3}[0-9]{1}$/,
+      description: `1 letter then 1 number then 1 letter or number then 2 numbers then 3 letters then 1 number`,
     },
+    // {
+    //   regex: /^[0-9]{14}$/,
+    //   description: `14 numbers`,
+    // },
   ],
   NE: [
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{6,8}$/,
+    //   description: `1 letter followed by 6-8 numbers`,
+    // },
     {
-      regex: /^[A-Z]{1}[0-9]{6,8}$/,
-      description: `1 letter followed by 6-8 numbers`,
+      regex: /^[ABCEGHV]{1}[0-9]{3,8}$/,
+      description: `A,B,C,E,G,H or V followed by 3-8 numbers`,
     },
   ],
   NV: [
-    {
-      regex: /^[0-9]{9,10}$/,
-      description: `9-10 numbers`,
-    },
+    // {
+    //   regex: /^[0-9]{9,10}$/,
+    //   description: `9-10 numbers`,
+    // },
     {
       regex: /^[0-9]{12}$/,
       description: `12 numbers`,
     },
     {
-      regex: /^[X]{1}[0-9]{8}$/,
-      description: `'X' followed by 8 numbers`,
+      regex: /^[0-9]{10}$/,
+      description: `10 numbers`,
     },
+    // {
+    //   regex: /^[X]{1}[0-9]{8}$/,
+    //   description: `'X' followed by 8 numbers`,
+    // },
   ],
   NH: [
     {
@@ -286,32 +338,40 @@ module.exports = {
     },
   ],
   NM: [
+    // {
+    //   regex: /^[0-9]{8,9}$/,
+    //   description: `8-9 numbers`,
+    // },
     {
-      regex: /^[0-9]{8,9}$/,
-      description: `8-9 numbers`,
+      regex: /^[0-9]{9}$/,
+      description: `9 numbers`,
     },
   ],
   NY: [
-    {
-      regex: /^[A-Z]{1}[0-9]{7}$/,
-      description: `1 letter followed by 7 numbers`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{7}$/,
+    //   description: `1 letter followed by 7 numbers`,
+    // },
     {
       regex: /^[A-Z]{1}[0-9]{18}$/,
       description: `1 letter followed by 18 numbers`,
     },
     {
-      regex: /^[0-9]{8,9}$/,
-      description: `8-9 numbers`,
+      regex: /^[0-9]{9}$/,
+      description: `9 numbers`,
     },
-    {
-      regex: /^[0-9]{16}$/,
-      description: `16 numbers`,
-    },
-    {
-      regex: /^[A-Z]{8}$/,
-      description: `8 letters`,
-    },
+    // {
+    //   regex: /^[0-9]{8,9}$/,
+    //   description: `8-9 numbers`,
+    // },
+    // {
+    //   regex: /^[0-9]{16}$/,
+    //   description: `16 numbers`,
+    // },
+    // {
+    //   regex: /^[A-Z]{8}$/,
+    //   description: `8 letters`,
+    // },
   ],
   NC: [
     {
@@ -330,17 +390,25 @@ module.exports = {
     },
   ],
   OH: [
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{4,8}$/,
+    //   description: `1 letter followed by 4-8 numbers`,
+    // },
+    // {
+    //   regex: /^[A-Z]{2}[0-9]{3,7}$/,
+    //   description: `2 letters followed by 3-7 numbers`,
+    // },
+    // {
+    //   regex: /^[0-9]{8}$/,
+    //   description: `8 numbers`,
+    // },
     {
-      regex: /^[A-Z]{1}[0-9]{4,8}$/,
-      description: `1 letter followed by 4-8 numbers`,
+      regex: /^[A-Z]{2}[0-9]{6}$/,
+      description: `2 letters followed by 6 numbers`,
     },
     {
-      regex: /^[A-Z]{2}[0-9]{3,7}$/,
-      description: `2 letters followed by 3-7 numbers`,
-    },
-    {
-      regex: /^[0-9]{8}$/,
-      description: `8 numbers`,
+      regex: /^[0-9]{9}$/,
+      description: `9 numbers`,
     },
   ],
   OK: [
@@ -354,9 +422,17 @@ module.exports = {
     },
   ],
   OR: [
+    // {
+    //   regex: /^[0-9]{1,9}$/,
+    //   description: `1-9 numbers`,
+    // },
     {
-      regex: /^[0-9]{1,9}$/,
-      description: `1-9 numbers`,
+      regex: /^[0-9]{1,7}$/,
+      description: `1-7 numbers`,
+    },
+    {
+      regex: /^[A-Z]{1}[0-9]{6}$/,
+      description: `1 letter followed by 6 numbers`,
     },
   ],
   PA: [
@@ -370,25 +446,37 @@ module.exports = {
       regex: /^[0-9]{7}$/,
       description: `7 numbers`,
     },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{6}$/,
+    //   description: `1 letter followed by 6 numbers`,
+    // },
     {
-      regex: /^[A-Z]{1}[0-9]{6}$/,
-      description: `1 letter followed by 6 numbers`,
+      regex: /^[V]{1}[0-9]{6}$/,
+      description: `'V' followed by 6 numbers`,
     },
   ],
   SC: [
+    // {
+    //   regex: /^[0-9]{5,11}$/,
+    //   description: `5-11 numbers`,
+    // }
     {
-      regex: /^[0-9]{5,11}$/,
-      description: `5-11 numbers`,
+      regex: /^[0-9]{6,9}$/,
+      description: `6-9 numbers`,
     }
   ],
   SD: [
+    // {
+    //   regex: /^[0-9]{6,10}$/,
+    //   description: `6-10 numbers`,
+    // },
+    // {
+    //   regex: /^[0-9]{12}$/,
+    //   description: `12 numbers`,
+    // },
     {
-      regex: /^[0-9]{6,10}$/,
-      description: `6-10 numbers`,
-    },
-    {
-      regex: /^[0-9]{12}$/,
-      description: `12 numbers`,
+      regex: /^[0-9]{8,9}$/,
+      description: `8-9 numbers`,
     },
   ],
   TN: [
@@ -398,9 +486,13 @@ module.exports = {
     },
   ],
   TX: [
+    // {
+    //   regex: /^[0-9]{7,8}$/,
+    //   description: `7-8 numbers`,
+    // },
     {
-      regex: /^[0-9]{7,8}$/,
-      description: `7-8 numbers`,
+      regex: /^[01234]{1}[0-9]{7}$/,
+      description: `0,1,2,3 or 4 followed by 7 numbers`,
     },
   ],
   UT: [
@@ -420,13 +512,17 @@ module.exports = {
     },
   ],
   VA: [
-    {
-      regex: /^[A-Z]{1}[0-9]{9,11}$/,
-      description: `1 letter followed by 9-11 numbers`,
-    },
+    // {
+    //   regex: /^[A-Z]{1}[0-9]{9,11}$/,
+    //   description: `1 letter followed by 9-11 numbers`,
+    // },
     {
       regex: /^[0-9]{9}$/,
       description: `9 numbers`,
+    },
+    {
+      regex: /^[A-Z]{1}[0-9]{8}$/,
+      description: `1 letter followed by 8 numbers`,
     },
   ],
   WA: [
