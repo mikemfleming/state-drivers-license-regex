@@ -1,15 +1,13 @@
-// CLI ARGS
-const state = process.argv.indexOf(`-s`) > -1 ? process.argv[process.argv.indexOf(`-s`) + 1].toUpperCase() : false;
-const dl = process.argv.indexOf(`-n`) > -1 ? process.argv[process.argv.indexOf(`-n`) + 1].toUpperCase() : false;
-
-if (!state) return console.log(`Invalid State`);
-if (!dl) return console.log(`Invalid License Number`);
-
 // PROJECT FILES
 const tests = require(`./regex`);
 
-// APP LOGIC
+module.exports = validateDriversLicense;
+
 function validateDriversLicense(state, dl) {
+  if (!state || !dl) throw new Error('State and DL params are required for license verification');
+  state = state.toUpperCase();
+  dl = dl.toUpperCase();
+
   const failedTests = tests[state].filter(format => !format.regex.test(dl));
 
   // if dl fails all tests
@@ -28,6 +26,16 @@ function validateDriversLicense(state, dl) {
   }
 }
 
-const output = validateDriversLicense(state, dl);
+// IF RUN FROM CLI
+if (!module.parent) {
+  // CLI ARGS
+  const state = process.argv.indexOf(`-s`) > -1 ? process.argv[process.argv.indexOf(`-s`) + 1] : false;
+  const dl = process.argv.indexOf(`-n`) > -1 ? process.argv[process.argv.indexOf(`-n`) + 1] : false;
 
-console.log(output)
+  // SANITIZE INPUT
+  if (!state) return console.log(`Invalid State`);
+  if (!dl) return console.log(`Invalid License Number`);
+
+  const output = validateDriversLicense(state, dl);
+  console.log(output);
+}
