@@ -2,42 +2,66 @@ module.exports = {
   AL: {
     test: [
       {
-        regex: /^\d{7}$/,
-        description: `7 Numeric Characters`,
-      }
+        regex: /^\d{1,7}$/,
+        description: `7 numbers`,
+      },
     ],
   },
   AK: {
-    regex: /^\d{7}$/,
-    description: `7 Numeric Characters Only`,
+    test: [
+      {
+        regex: /^\d{1,7}$/,
+        description: `7 numbers`,
+      },
+    ],
   },
   AZ: {
     test: [
       {
-        regex: /(^[A-Z]{1}[0-9]{1,8}$)/,
+        regex: /^\a{1}\d{1,8}$/,
         description: `1 letter followed by 1-8 numbers`,
       },
       {
-        regex: /(^[A-Z]{2}[0-9]{2,5}$)/,
+        regex: /^\a{2}\d{2,5}$/,
         description: `2 letters followed by 2-5 numbers`,
       },
       {
-        regex: /(^[0-9]{9}$)/,
+        regex: /^\d{9}$/,
         description: `9 numbers`,
       },
-    ]
+    ],
   },
   AR: {
-    regex: /^[0-9]{4,9}$/,
-    description: `Description for AR`,
+    test: [
+      {
+        regex: /^[0-9]{4,9}$/,
+        description: `4-9 numbers`,
+      },
+    ],
   },
   CA: {
-    regex: /^[A-Z]{1}[0-9]{7}$/,
-    description: `Description for CA`,
+    test: [
+      {
+        regex: /^[A-Z]{1}[0-9]{7}$/,
+        description: `1 letter followed by 7 numbers`,
+      },
+    ],
   },
   CO: {
-    regex: /(^[0-9]{9}$)|(^[A-Z]{1}[0-9]{3,6}$)|(^[A-Z]{2}[0-9]{2,5}$)/,
-    description: `CO`,
+    test: [
+      {
+        regex: /^[0-9]{9}$/,
+        description: `9 numbers`,
+      },
+      {
+        regex: /^[A-Z]{1}[0-9]{3,6}$/,
+        description: `1 letter followed by 3-6 numbers`,
+      },
+      {
+        regex: /^[A-Z]{2}[0-9]{2,5}$/,
+        description: `2 letters followed by 2-5 numbers`,
+      },
+    ],
   },
   CT: {
     regex: /^[0-9]{9}$/,

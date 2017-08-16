@@ -11,13 +11,17 @@ const usdl = require(`./regex`);
 // APP LOGIC
 function validateDriversLicense(state, dl) {
   const failedTests = usdl[state].test.filter(format => !format.regex.test(dl));
-  if (failedTests.length) {
+
+  // if dl fails all tests
+  if (failedTests.length === usdl[state].test.length) {
+    // send back err status and useful message
     const whyItFailed = failedTests.map(reason => reason.description).join(' OR ');
     return {
       status: 0,
-      message: `Required: ${whyItFailed}`,
+      message: `Required for ${state}: ${whyItFailed}`,
     };
   }
+  // else send back success status
   return {
     status: 1,
     message: `License is Valid`,
