@@ -14,4 +14,4 @@ node index.js -s tx -n 45129637
 
 Built according to NTSI information current as of 8/17.
 
-Credit where credit is due, Adam Bullmer a lot of the regex I use came from a repo by Adam Bullmer you can find here: https://github.com/adambullmer/USDLRegex
+Credit where credit is due, a lot of the regex I use here is from a repo by Adam Bullmer you can find here: https://github.com/adambullmer/USDLRegex
