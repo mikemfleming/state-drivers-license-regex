@@ -1,7 +1,7 @@
 # state-drivers-license-regex
 State drivers license validation using Node and regular expressions with an option to be used as a CLI tool.
 
-Validates US driver's licenses with regex and returns an object with a success status and message.
+Performs basic validation of US driver's licenses with regex and returns an object with a success status and message.
 
 Example usage:
 ```
