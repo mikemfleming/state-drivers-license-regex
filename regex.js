@@ -2,13 +2,13 @@ module.exports = {
   AL: [
     {
       regex: /^[0-9]{1,7}$/,
-      description: `7 numbers`,
+      description: `1-7 numbers`,
     },
   ],
   AK: [
     {
       regex: /^[0-9]{1,7}$/,
-      description: `7 numbers`,
+      description: `1-7 numbers`,
     },
   ],
   AZ: [
@@ -59,8 +59,8 @@ module.exports = {
   ],
   DE: [
     {
-      regex: /^\d{7}$/,
-      description: `7 numbers`,
+      regex: /^[0-9]{1,7}$/,
+      description: `1-7 numbers`,
     },
   ],
   DC: [
